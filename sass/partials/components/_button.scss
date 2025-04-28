@@ -1,0 +1,15 @@
+button {
+    transition: $normal;
+    display: flex;
+    place-self: center;
+    background-color: $secondary-color;
+    color: $primary-color;
+    padding: 12px;
+    border: double 12px $primary-color;
+    &:hover {
+        transform: scale(1.1);
+        background-color: $primary-color;
+        color: $secondary-color;
+        border: double 12px $secondary-color;
+    }
+}

@@ -1,0 +1,24 @@
+body {
+    font-family: "Courier Prime", monospace;
+    background-color: $secondary-color;
+    font-size: $xs;
+}
+main {
+    margin: 34px 16px;
+}
+h1, h2, h3 {
+    transition: $normal;
+    text-align: center;
+    font-size: $xl;
+    margin: 10px;
+    margin-bottom: 32px;
+}
+h2 {
+    font-size: $l;
+}
+h3 {
+    font-size: $m;
+}
+p {
+    text-align: center;
+}

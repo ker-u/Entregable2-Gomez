@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/*Colores*/
+/*Tamaños de fuente*/
+/*Velocidades*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Courier Prime", monospace;
+  background-color: #eae7c4;
+  font-size: 22px;
+}
+
+main {
+  margin: 34px 16px;
+}
+
+h1, h2, h3 {
+  transition: 0.2s;
+  text-align: center;
+  font-size: 34px;
+  margin: 10px;
+  margin-bottom: 32px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+p {
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+.logo img {
+  transition: 0.2s;
+  width: 148px;
+  margin-top: 60px;
+}
+
+.textoinf {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.textoinf div {
+  text-align: center;
+  max-width: 1040px;
+  padding: 26px;
+  background-color: #2e4372;
+  border: double #eae7c4 12px;
+  margin-block: 18px;
+}
+.textoinf div p {
+  color: #eae7c4;
+}
+
+button {
+  transition: 0.2s;
+  display: flex;
+  place-self: center;
+  background-color: #eae7c4;
+  color: #2e4372;
+  padding: 12px;
+  border: double 12px #2e4372;
+}
+button:hover {
+  transform: scale(1.1);
+  background-color: #2e4372;
+  color: #eae7c4;
+  border: double 12px #eae7c4;
+}
+
+/*# sourceMappingURL=style.css.map */

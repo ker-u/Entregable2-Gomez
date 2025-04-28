@@ -1,0 +1,16 @@
+.textoinf {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    div {
+        text-align: center;
+        max-width: 1040px;
+        padding: 26px;
+        background-color: $primary-color;
+        border: double $secondary-color 12px;
+        margin-block: 18px;
+        p {
+            color: $secondary-color;
+        }
+    }
+}

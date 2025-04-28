@@ -1,0 +1,9 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    img {
+        transition: $normal;
+        width: 148px;
+        margin-top: 60px;
+    }
+}
