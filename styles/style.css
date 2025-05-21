@@ -64,17 +64,19 @@ p {
   color: #eae7c4;
 }
 
-button {
+.button {
   transition: 0.2s;
   display: flex;
+  flex-direction: column;
   place-self: center;
   background-color: #eae7c4;
   color: #2e4372;
   padding: 12px;
+  max-width: 500px;
   border: double 12px #2e4372;
+  margin-block: 30px;
 }
-button:hover {
-  transform: scale(1.1);
+.button:hover {
   background-color: #2e4372;
   color: #eae7c4;
   border: double 12px #eae7c4;
