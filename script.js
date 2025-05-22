@@ -110,7 +110,6 @@ function mostrarProductosPorCategoria(categoria) {
   });
 }
 
-// Evento para botón "Armar Carrito"
 document.getElementById("verProductos").addEventListener("click", () => {
   mostrarCategorias();
   mostrarCarrito();
