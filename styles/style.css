@@ -81,5 +81,9 @@ p {
   color: #eae7c4;
   border: double 12px #eae7c4;
 }
+.button:active {
+  transition: 0.2s;
+  transform: scale(1.02);
+}
 
 /*# sourceMappingURL=style.css.map */
