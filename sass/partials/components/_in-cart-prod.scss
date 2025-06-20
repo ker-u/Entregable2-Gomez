@@ -1,0 +1,16 @@
+.prods-en-carrito ul {
+    padding-bottom: 72px;
+}
+.total p {
+    display: inline-block;
+    position: fixed;
+    z-index: 3;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: $xxs;
+    color: $primary-color;
+    background-color: $secondary-color;
+    padding: 12px;
+    border: double $primary-color 12px;
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,21 +22,27 @@
         <h1>Visozo Libros</h1>
         <section class="textoinf">
             <div>
-                <p>Visozo Libros es una tienda dedicada a la distribución de libros... Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, iure rem necessitatibus quam, ut neque ducimus inventore voluptates error dolor, dolorem nisi? Perspiciatis voluptatem unde pariatur cum dignissimos! Quis, error?</p>
+                <p>En esta sección podés explorar y armar tu propio carrito de libros de distintas categorías. Seleccioná los temas que te interesen, visualizá los títulos disponibles y agregalos a tu carrito para llevar un registro de tus preferencias.
+                Más adelante vas a poder acceder directamente a tiendas online para concretar tu compra.<br>¡Gracias por acompañarnos en esta nueva etapa!</p>
             </div>
         </section>
         <p>Armá tu carrito con nuestros productos de forma online acá:</p>
-        <button id="verProductos" class="button">Armar Carrito</button>
-        <div id="categorias" class="button"></div>
-        <div id="productos" class="button"></div>
-        <h2 id="titulo-carrito" class="d-none">Carrito:</h2>
-        <ul id="carrito-lista" class="list-group mb-2"></ul>
-        <p id="total" class="fw-bold"></p>
+        <button id="verProductos" class="button">Mostrar Carrito</button>
+        <div id="categorias" class="button d-none"></div>
+        <div id="productos" class="button d-none"></div>
+        <div id="bloque-carrito" class="prods-en-carrito d-none">
+            <h2 id="titulo-carrito" class="d-none">Carrito:</h2>
+            <ul id="carrito-lista" class="list-group mb-2"></ul>
+            <div id="contenedor-total" class="total d-none">
+                <p id="total" class="fw-bold"></p>
+            </div>
+        </div>
     </main>
 
     <footer>
 
     </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
     <script src="./script.js"></script>
 </body>

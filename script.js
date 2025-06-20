@@ -20,6 +20,7 @@ function mostrarCarrito() {
   const carritoLista = document.getElementById("carrito-lista");
   const totalElemento = document.getElementById("total");
   const tituloCarrito = document.getElementById("titulo-carrito");
+  const contenedorTotal = document.getElementById("contenedor-total");
 
   carritoLista.innerHTML = "";
   let total = 0;
@@ -27,10 +28,12 @@ function mostrarCarrito() {
   if (carrito.length === 0) {
     tituloCarrito.classList.add("d-none");
     totalElemento.textContent = "";
+    contenedorTotal.classList.add("d-none");
     return;
   }
 
   tituloCarrito.classList.remove("d-none");
+  contenedorTotal.classList.remove("d-none");
 
   carrito.forEach((item, index) => {
     const li = document.createElement("li");
@@ -114,6 +117,20 @@ async function buscarLibrosPorTema(tema) {
         carrito.push(producto);
         guardarCarrito();
         mostrarCarrito();
+
+        Toastify({
+          text: `✅ Se agregó el libro al carrito`,
+          duration: 2400,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "#eae7c4",
+          close: false,
+          style: {
+            color: "#2e4372",
+            padding: "12px",
+            border: "double #2e4372 12px"
+          }
+        }).showToast();
       });
 
       div.appendChild(btn);
@@ -139,8 +156,42 @@ function mostrarCategorias() {
 }
 
 document.getElementById("verProductos").addEventListener("click", () => {
-  mostrarCategorias();
-  mostrarCarrito();
+  const btn = document.getElementById("verProductos");
+  const categoriasDiv = document.getElementById("categorias");
+  const productosDiv = document.getElementById("productos");
+  const contenedorTotal = document.getElementById("contenedor-total");
+  const bloqueCarrito = document.getElementById("bloque-carrito");
+
+  const estaVisible = !categoriasDiv.classList.contains("d-none");
+
+  if (estaVisible) {
+    categoriasDiv.classList.add("d-none");
+    productosDiv.classList.add("d-none");
+    contenedorTotal.classList.add("d-none");
+    bloqueCarrito.classList.add("d-none");
+    btn.textContent = "Mostrar Carrito";
+  } else {
+    categoriasDiv.classList.remove("d-none");
+    mostrarCategorias();
+    mostrarCarrito();
+    bloqueCarrito.classList.remove("d-none");
+    btn.textContent = "Ocultar Carrito";
+  }
 });
 
-window.eliminarDelCarrito = eliminarDelCarrito;
+function mostrarCategorias() {
+  const categoriasUnicas = ["Ciencia", "Literatura", "Arte de anime", "Historia", "Autoayuda", "Infantiles"];
+  const div = document.getElementById("categorias");
+  div.innerHTML = "<h3>Selecciona un tema:</h3>";
+
+  categoriasUnicas.forEach(cat => {
+    const btn = document.createElement("button");
+    btn.classList.add("btn", "btn-secondary", "m-1");
+    btn.textContent = cat;
+    btn.addEventListener("click", () => {
+      buscarLibrosPorTema(cat);
+      document.getElementById("productos").classList.remove("d-none");
+    });
+    div.appendChild(btn);
+  });
+}
