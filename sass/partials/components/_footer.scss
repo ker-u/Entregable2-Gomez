@@ -1,0 +1,27 @@
+footer {
+    padding: 14px;
+    padding-top: 38px;
+    background-color: $secondary-color;
+    padding-bottom: 70px;
+    border-top: double $primary-color 12px;
+}
+.cont p {
+    margin: 14px;
+    color: $primary-color;
+}
+.redes {
+    display: flex;
+    place-content: center;
+    gap: 18px;
+    img {
+        transition: $fast;
+        width: 50px;
+        border-radius: 26%;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    li {
+        list-style: none;
+    }
+}

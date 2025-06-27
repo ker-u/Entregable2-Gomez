@@ -82,10 +82,6 @@ p {
   border: double 12px #eae7c4;
 }
 
-.prods-en-carrito ul {
-  padding-bottom: 72px;
-}
-
 .total p {
   display: inline-block;
   position: fixed;
@@ -98,6 +94,36 @@ p {
   background-color: #eae7c4;
   padding: 12px;
   border: double #2e4372 12px;
+}
+
+footer {
+  padding: 14px;
+  padding-top: 38px;
+  background-color: #2e4372;
+  padding-bottom: 70px;
+  border-top: double #eae7c4 12px;
+}
+
+.cont p {
+  margin: 14px;
+  color: #eae7c4;
+}
+
+.redes {
+  display: flex;
+  place-content: center;
+  gap: 18px;
+}
+.redes img {
+  transition: 0.1s;
+  width: 50px;
+  border-radius: 26%;
+}
+.redes img:hover {
+  transform: scale(1.1);
+}
+.redes li {
+  list-style: none;
 }
 
 /*# sourceMappingURL=style.css.map */

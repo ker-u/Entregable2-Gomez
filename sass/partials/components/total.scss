@@ -1,6 +1,3 @@
-.prods-en-carrito ul {
-    padding-bottom: 72px;
-}
 .total p {
     display: inline-block;
     position: fixed;
@@ -9,8 +6,8 @@
     left: 50%;
     transform: translateX(-50%);
     font-size: $xxs;
-    color: $primary-color;
-    background-color: $secondary-color;
+    color: $secondary-color;
+    background-color: $primary-color;
     padding: 12px;
-    border: double $primary-color 12px;
+    border: double $secondary-color 12px;
 }
